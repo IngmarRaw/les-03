@@ -1,0 +1,7 @@
+---
+- name: Opdracht 2 uitvoeren op VM van opdracht 1
+  hosts: all
+  become: true
+
+  roles:
+    - vm_baseline

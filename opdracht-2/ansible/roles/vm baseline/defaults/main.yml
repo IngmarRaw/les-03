@@ -1,0 +1,8 @@
+---
+esxi_ip: "192.168.2.150"
+backup_dir: "/tmp/backup"
+backup_script_path: "/usr/local/bin/daily_backup.sh"
+copied_file_src: "files/voorbeeld.txt"
+copied_file_dest: "/tmp/voorbeeld.txt"
+backup_hour: "2"
+backup_minute: "0"
