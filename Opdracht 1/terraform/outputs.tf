@@ -1,9 +1,9 @@
 output "vm_name" {
-  value = azurerm_linux_virtual_machine.vm.name
+  value = esxi_guest.vm.guest_name
 }
 
-output "public_ip" {
-  value = azurerm_public_ip.vm.ip_address
+output "vm_ip_address" {
+  value = esxi_guest.vm.ip_address
 }
 
 output "inventory_file" {
