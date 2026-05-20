@@ -26,7 +26,7 @@
   ansible.builtin.copy:
     src: "{{ copied_file_src }}"
     dest: "{{ copied_file_dest }}"
-    owner: root
+    owner: iacuser
     group: root
     mode: "0644"
 
@@ -34,14 +34,14 @@
   ansible.builtin.file:
     path: "{{ backup_dir }}"
     state: directory
-    owner: root
+    owner: iacuser
     group: root
     mode: "0755"
 
 - name: Maak backup script aan
   ansible.builtin.copy:
     dest: "{{ backup_script_path }}"
-    owner: root
+    owner: iacuser
     group: root
     mode: "0755"
     content: |
