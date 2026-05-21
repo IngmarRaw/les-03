@@ -1,0 +1,14 @@
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Installeer nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+
+- name: Zorg dat nginx gestart en enabled is
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true

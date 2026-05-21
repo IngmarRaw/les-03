@@ -81,7 +81,7 @@ resource "esxi_guest" "databaseserver" {
 }
 
 resource "local_file" "inventory" {
-  filename = "${path.module}/inventory.ini"
+  filename = "${path.module}/../opdracht-4/inventory.ini"
   content = join("\n", concat(
     ["[web]"],
     [
