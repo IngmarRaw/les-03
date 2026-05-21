@@ -1,14 +1,18 @@
 ---
-- name: Backup alle VM's op Proxmox hypervisors
+- name: Backup alle Proxmox VM's
   hosts: proxmox
   gather_facts: false
+  collections:
+    - community.proxmox
 
   tasks:
-    - name: Maak een backup van alle VM's
+    - name: Start backup van alle VM's op node1
       community.proxmox.proxmox_backup:
-        api_user: "test@pam"
-        api_password: "test"
         api_host: "{{ api_host }}"
-        storage: "backup_vm"
-        mode: "all"
+        api_user: test
+        api_password: test
+        storage: backup_vm
+        mode: all
+        node: node1
+        wait: true
         validate_certs: false
