@@ -1,0 +1,2 @@
+[proxmox]
+node1 api_host=node1
